@@ -103,7 +103,7 @@ function SearchBar({ onSearchResult }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Buscar perfume o casa..."
-          className="w-full px-4 py-2 focus:outline-none text-sm h-10 rounded-l-md border border-gray-300"
+          className="w-full px-4 py-2 focus:outline-none text-xs h-10 rounded-l-md border border-gray-300"
           onFocus={() => setShowSuggestions(true)}
         />
         <button
