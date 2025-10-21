@@ -7,7 +7,12 @@ function MenuDesplegado({
   openMenu,
   array,
   onSelectItem,
+  prioridad,
 }) {
+  const arrayOrdenado = prioridad
+    ? [...array].sort((a, b) => (prioridad[a] || 99) - (prioridad[b] || 99))
+    : [...array].sort((a, b) => a.localeCompare(b));
+
   return (
     <div className="relative">
       <button
@@ -26,7 +31,7 @@ function MenuDesplegado({
       {openMenu === menuType && (
         <div className="absolute mt-2 bg-white shadow-lg rounded-md border border-gray-200 w-40 sm:w-48 z-20 max-h-64 overflow-y-auto">
           {array.length > 0 ? (
-            array.map((item, index) => (
+            arrayOrdenado.map((item, index) => (
               <div
                 key={index}
                 onClick={() => onSelectItem(item)}

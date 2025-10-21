@@ -84,6 +84,7 @@ export default function FilterMenu({
         openMenu={openMenu}
         array={ocasionesUnicas}
         onSelectItem={handleSelectOcasion}
+        prioridad={{ Disponible: 1, Próximamente: 2, Agotado: 3 }}
       />
 
       {/* Botón categoria */}
@@ -94,6 +95,7 @@ export default function FilterMenu({
         openMenu={openMenu}
         array={categoriasUnicas}
         onSelectItem={handleSelectCategoria}
+        prioridad={{ Nicho: 1, Diseñador: 2, Árabe: 3 }}
       />
     </div>
   );
