@@ -102,7 +102,7 @@ function SearchBar({ onSearchResult }) {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Buscar perfume..."
+          placeholder="Buscar perfume o casa..."
           className="w-full px-4 py-2 focus:outline-none text-sm h-10 rounded-l-md border border-gray-300"
           onFocus={() => setShowSuggestions(true)}
         />
@@ -132,7 +132,7 @@ function SearchBar({ onSearchResult }) {
               <img
                 src={item.image}
                 alt={item.nombre}
-                className="w-8 h-8 rounded object-cover mr-3"
+                className="h-6 rounded object-cover mr-3"
               />
               <span className="text-sm">{item.nombre}</span>
             </li>
